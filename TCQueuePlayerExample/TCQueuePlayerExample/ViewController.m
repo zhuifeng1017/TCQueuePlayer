@@ -53,11 +53,16 @@
     NSString *urlString1 = [[NSBundle mainBundle] pathForResource:@"sample2" ofType:@"mp4"];
     NSString *urlString2 = [[NSBundle mainBundle] pathForResource:@"sample1" ofType:@"m4v"];
     
-    NSArray *videos = [[NSArray alloc] initWithObjects:
+    NSString *audioUrlString1 = [[NSBundle mainBundle] pathForResource:@"18" ofType:@"mp3"];
+    NSString *audioUrlString2 = [[NSBundle mainBundle] pathForResource:@"oD71cTslQMovaKq296ugThmWrpRVir6j_3pm" ofType:@"mp3"];
+    
+    NSArray *audioVideos = [[NSArray alloc] initWithObjects:
+                       [AVPlayerItem playerItemWithURL:[[NSURL alloc] initFileURLWithPath:audioUrlString1]],
+                       [AVPlayerItem playerItemWithURL:[[NSURL alloc] initFileURLWithPath:audioUrlString2]],
                        [AVPlayerItem playerItemWithURL:[[NSURL alloc] initFileURLWithPath:urlString1]],
                        [AVPlayerItem playerItemWithURL:[[NSURL alloc] initFileURLWithPath:urlString2]], nil];
     
-    TCQueuePlayerViewController *player = [[TCQueuePlayerViewController alloc] initWithItems:videos];
+    TCQueuePlayerViewController *player = [[TCQueuePlayerViewController alloc] initWithItems:audioVideos];
     
     [self.navigationController presentViewController:player
                                             animated:YES

@@ -23,6 +23,8 @@
 		219D5BC11758B055007870EC /* sample1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 219D5BBF1758B055007870EC /* sample1.m4v */; };
 		219D5BC21758B055007870EC /* sample2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 219D5BC01758B055007870EC /* sample2.mp4 */; };
 		21B33FF9174FC11E009B9214 /* libTCQueuePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B33FF6174FC106009B9214 /* libTCQueuePlayer.a */; };
+		6D39DE0A1C1677D200229210 /* 18.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D39DE081C1677D200229210 /* 18.mp3 */; };
+		6D39DE0B1C1677D200229210 /* oD71cTslQMovaKq296ugThmWrpRVir6j_3pm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D39DE091C1677D200229210 /* oD71cTslQMovaKq296ugThmWrpRVir6j_3pm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		219D5BBF1758B055007870EC /* sample1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample1.m4v; sourceTree = SOURCE_ROOT; };
 		219D5BC01758B055007870EC /* sample2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample2.mp4; sourceTree = SOURCE_ROOT; };
 		21B33FF1174FC106009B9214 /* TCQueuePlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TCQueuePlayer.xcodeproj; path = ../../TCQueuePlayer.xcodeproj; sourceTree = "<group>"; };
+		6D39DE081C1677D200229210 /* 18.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 18.mp3; sourceTree = "<group>"; };
+		6D39DE091C1677D200229210 /* oD71cTslQMovaKq296ugThmWrpRVir6j_3pm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oD71cTslQMovaKq296ugThmWrpRVir6j_3pm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		219D5BBE1758B044007870EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D39DE081C1677D200229210 /* 18.mp3 */,
+				6D39DE091C1677D200229210 /* oD71cTslQMovaKq296ugThmWrpRVir6j_3pm.mp3 */,
 				219D5BBF1758B055007870EC /* sample1.m4v */,
 				219D5BC01758B055007870EC /* sample2.mp4 */,
 			);
@@ -228,8 +234,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D39DE0B1C1677D200229210 /* oD71cTslQMovaKq296ugThmWrpRVir6j_3pm.mp3 in Resources */,
 				2156B2E5174FAFEE00DD5FE2 /* InfoPlist.strings in Resources */,
 				2156B2ED174FAFEF00DD5FE2 /* Default.png in Resources */,
+				6D39DE0A1C1677D200229210 /* 18.mp3 in Resources */,
 				2156B2EF174FAFEF00DD5FE2 /* Default@2x.png in Resources */,
 				2156B2F1174FAFEF00DD5FE2 /* Default-568h@2x.png in Resources */,
 				219D5BC11758B055007870EC /* sample1.m4v in Resources */,

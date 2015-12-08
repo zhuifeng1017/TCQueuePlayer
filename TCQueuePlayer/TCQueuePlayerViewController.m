@@ -21,6 +21,7 @@ static const CGFloat kControlsAnimationDuration = 0.2f;
 @property (nonatomic, strong) UIView *bottomControlsView;
 @property (nonatomic, strong) UIButton *playButton;
 @property (nonatomic, strong) UIButton *pauseButton;
+@property (nonatomic, strong) UIButton *nextButton;
 @property (nonatomic, strong) UISlider *progressSlider;
 // View layout
 - (void)setupControls;
@@ -66,6 +67,7 @@ static const CGFloat kControlsAnimationDuration = 0.2f;
     self = [super initWithNibName:nil bundle:nil];
     if (self) {        
         _player = [AVQueuePlayer queuePlayerWithItems:items];
+        
         
         for (AVPlayerItem *item in self.player.items) {
             [[NSNotificationCenter defaultCenter] addObserver:self
@@ -123,6 +125,17 @@ static const CGFloat kControlsAnimationDuration = 0.2f;
                                           self.view.bounds.size.height)];
 
     [self.view.layer addSublayer:self.playerLayer];
+    
+    UIButton *nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2-50, self.view.bounds.size.height-100, 100, 30)];
+    [nextBtn setTitle:@"下一个" forState:(UIControlStateNormal)];
+    [self.view addSubview:nextBtn];
+    [nextBtn addTarget:self action:@selector(nextBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
+    self.nextButton = nextBtn;
+}
+
+-(IBAction)nextBtnClick:(UIButton*)sender{
+    [_player advanceToNextItem];
+    sender.hidden = (_player.items.count<=1);
 }
 
 - (void)setupControls
@@ -331,6 +344,8 @@ static const CGFloat kControlsAnimationDuration = 0.2f;
 
 - (void)syncSlider
 {
+    self.nextButton.hidden = self.player.items.count<=1;
+    
     CMTime playerDuration = [self playerItemDuration];
     if (CMTIME_IS_INVALID(playerDuration)) {
         return;
