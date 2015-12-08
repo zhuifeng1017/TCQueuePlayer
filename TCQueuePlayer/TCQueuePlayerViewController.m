@@ -285,7 +285,7 @@ static const CGFloat kControlsAnimationDuration = 0.2f;
 
 - (CMTime)playerItemDuration
 {
-    return [self.player.currentItem duration];
+    return [[self.player.currentItem asset] duration];
 }
 
 - (void)itemDidFinishPlaying:(NSNotification *)notification
